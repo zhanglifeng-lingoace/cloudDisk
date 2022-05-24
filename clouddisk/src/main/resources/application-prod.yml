@@ -1,0 +1,19 @@
+#mysql-dev
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://dev-lms.cq6gbzb8eeqc.us-west-1.rds.amazonaws.com:3306/lingoace_lms_package?allowMultiQueries=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+          username: lingoace-lms
+          password: clmdxoVgR7RD
+
+log:
+  path: /data/logs/edu/cloudDisk
+
+client:
+  pub-studentcenter-host: internal-inner-app-elb-584548812.us-west-1.elb.amazonaws.com:8400
+  pub-usercent-host: internal-inner-app-elb-584548812.us-west-1.elb.amazonaws.com:8405
+  teacher-manage-host:  teacher-manage.prd.aws.us

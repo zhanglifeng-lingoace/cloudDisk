@@ -1,0 +1,31 @@
+server:
+  port: 8431
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: cloudDisk
+  main:
+    allow-bean-definition-overriding: true
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  messages:
+    encoding: UTF-8
+
+mybatis-plus:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.edu.cloudDisk.entity
+  basePackages:
+    mapper: com.edu.cloudDisk.mapper
+
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: z2^l5CIJYhsz$U!P #JWT加解密使用的密钥
+  expiration: 2592000 #JWT的超期限时间(30*24*60*60)_产品让改为有效期30天
+  tokenHead: Bearer  #JWT负载中拿到开头
