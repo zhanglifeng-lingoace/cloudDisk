@@ -41,7 +41,7 @@ public class LogRecordAspect {
         HttpServletRequest request = sra.getRequest();
         long start = System.currentTimeMillis();
         String requestId = start + getRandom();
-        if (!request.getRequestURI().equals("/cloudDisk/alive")) {
+        if (!request.getRequestURI().equals("/cloudDisk/check/alive")) {
         LogPrint.info("请求开始requestId:" + requestId + "===地址:" + request.getRequestURL().toString());
         String pathUri = request.getRequestURI();
         String method = request.getMethod();
